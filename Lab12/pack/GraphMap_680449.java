@@ -12,7 +12,7 @@ public class GraphMap_680449 {
     private Map<Integer, List<Integer>> graph;
 
     public GraphMap_680449(int n, List<int[]> edges) {
-        /* your code 5: create the map and add vertices 0 through n - 1 */
+        /* your code 5 */
         graph = new LinkedHashMap<>();
         for (int v = 0; v < n; v++) {
             addVertex(v);
@@ -35,7 +35,7 @@ public class GraphMap_680449 {
             return;
         }
 
-        /* your code 6: add both endpoint vertices and both directions */
+        /* your code 6 */
         addVertex(a);
         addVertex(b);
         addNeighbor(a, b);
@@ -50,7 +50,7 @@ public class GraphMap_680449 {
     }
 
     public boolean hasEdge(int a, int b) {
-        /* your code 7: check whether b is in a's adjacency list */
+        /* your code 7 */
         return graph.containsKey(a) && graph.containsKey(b) && graph.get(a).contains(b);
     }
 
@@ -93,7 +93,7 @@ public class GraphMap_680449 {
 
         for (int vertex : graph.keySet()) {
             if (!visited.contains(vertex)) {
-                /* your code 8: traverse this unvisited component */
+                /* your code 8 */
                 dfs(vertex, visited);
                 System.out.println();
             }
@@ -138,8 +138,7 @@ public class GraphMap_680449 {
                 if (hasCycleDfs(neighbor, current, visited)) {
                     return true;
                 }
-            } else if (/* your code 9 */neighbor != parent) {
-                // A visited neighbor that is not the parent forms a cycle.
+            } else if (neighbor != parent) {
                 return true;
             }
         }

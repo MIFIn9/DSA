@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 
 import pack.*;
 
-public class Lab09_680437 {
+public class Lab09_680449 {
     static ArrayList<Integer> least3;
     public static void main(String[] args) {
         System.out.println("-task1---");
@@ -21,7 +21,7 @@ public class Lab09_680437 {
     }    
     static void task_1() {
         least3 = new ArrayList<>();
-        MyMinHeap_680437 heap = new MyMinHeap_680437();
+        MyMinHeap_680449 heap = new MyMinHeap_680449();
         heap.insert(11);
         heap.insert(15);
         heap.insert(16);
@@ -36,7 +36,7 @@ public class Lab09_680437 {
     } 
     static void task_2() {
         least3 = new ArrayList<>();
-        MyPriorityQueue_680437 pq = new MyPriorityQueue_680437();
+        MyPriorityQueue_680449 pq = new MyPriorityQueue_680449();
         pq.enqueue(11);
         pq.enqueue(15);
         pq.enqueue(16);

@@ -1,6 +1,6 @@
 package pack;
 
-public class MyQuickSort_680437 {
+public class MyQuickSort_680449 {
     public void qSort(int[] arr) {
         qSort_lumoto(arr, 0, arr.length-1);
     }

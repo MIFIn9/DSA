@@ -123,8 +123,7 @@ public class Lab12a_Graph1_680449 {
             int current = stack.pop();
             traversal.append(current).append(" ");
             System.out.print(current + " ");
-            /* your code 10: scan each neighbor; if there is an unvisited edge, 
-                mark it visited and push it onto stack */
+            /* your code 10 */
             for (int next = matrix.length - 1; next >= 0; next--) {
                 int w = matrix[current][next];
                 if (w > 0 && w < INF && !visited[next]) {

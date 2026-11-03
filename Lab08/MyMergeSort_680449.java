@@ -1,6 +1,6 @@
 package pack;
 
-public class MyMergeSort_680437 {
+public class MyMergeSort_680449 {
     public void mSort(int[] nums) {
             int[] tmp = new int[nums.length];
             mSort(nums, tmp, 0, nums.length-1);

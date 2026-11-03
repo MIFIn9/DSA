@@ -16,7 +16,7 @@ public class GraphList_680449 {
         }
 
         if (edges != null) {
-            /* your code 1: add every valid edge from edges */
+            /* your code 1 */
             for (int[] edge : edges) {
                 if (edge != null && edge.length == 2) {
                     addEdge(edge[0], edge[1]);
@@ -30,7 +30,7 @@ public class GraphList_680449 {
             return;
         }
 
-        /* your code 2: add both directions of this undirected edge */
+        /* your code 2 */
         addNeighbor(a, b);
         addNeighbor(b, a);
     }
@@ -43,7 +43,7 @@ public class GraphList_680449 {
     }
 
     public boolean hasEdge(int a, int b) {
-        /* your code 3: check whether b is in a's adjacency list */
+        /* your code 3 */
         return isValidVertex(a) && isValidVertex(b) && adjacencyList[a].contains(b);
         
     }
@@ -64,7 +64,7 @@ public class GraphList_680449 {
         visited[current] = true;
 
         for (int neighbor : adjacencyList[current]) {
-            /* your code 4: visit an unvisited neighbor recursively and return true on success */
+            /* your code 4 */
             if (!visited[neighbor] && hasPathDfs(neighbor, target, visited)) {
                 return true;
             }

@@ -4,10 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-public class MyBST_Basic_680437 {
+public class MyBST_Basic_680449 {
     private BNode root;
-    public MyBST_Basic_680437() {  root = null; }
-    public MyBST_Basic_680437(Integer[] input) {
+    public MyBST_Basic_680449() {  root = null; }
+    public MyBST_Basic_680449(Integer[] input) {
         if (input.length == 0)
             return;
         root = null;

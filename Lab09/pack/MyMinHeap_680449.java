@@ -1,6 +1,6 @@
 package pack;
 
-public class MyMinHeap_680437 {
+public class MyMinHeap_680449 {
     int MAX_SIZE = 100;
     int heap[] = new int[MAX_SIZE];
     int size = 0;
@@ -24,18 +24,13 @@ public class MyMinHeap_680437 {
 
     public void insert(int d) {
         /* your code */
-        heap[size] = d;
-        int i = size;
-        size++;
-        while(i>0){
-            int parent = (i-1)/2;
-            if (heap[i]<heap[parent]) {
-                swap(i, parent);
-                i = parent;
-            }
-            else{
-                break;
-            }
+        int p = size++;
+        heap[p] = d;
+        int parent = (p-1)/2;
+        while((p>0) && (heap[p]<heap[parent])){
+            swap(p, parent);
+            p = parent;
+            parent = (p-1)/2;
         }
     }
 
@@ -44,25 +39,27 @@ public class MyMinHeap_680437 {
         heap[0] = heap[--size];
         heap[size] = d;
         int p = 0;
-        while (true) {
-            /* your code */
-            int left = (2*p) + 1;
-            if (left>=size)break;
-            int right = (2*p) + 2;
+        while(true){
+            int left = 2*p+1;
+            if (left >= size) break;
+            int right = 2*p+2;
             if(right == size){
                 if(heap[p]>heap[left]){
-                    swap(p,left);
+                    swap(p, left); 
                 }
                 break;
             }
-            else{
+            else {
                 int q = heap[left]<heap[right]?left:right;
-                if(heap[p]>heap[q])swap(p,q);
+                if(heap[p]>heap[q]){
+                    swap(p,q);
+                }
                 else break;
                 p=q;
             }
+
             System.out.println("heap snapshot (cur_size = " + size + ") " + this.toString());
-        } 
+        }
         return d;
     } //end while
 

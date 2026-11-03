@@ -1,7 +1,7 @@
 package pack;
 
-public class MyPriorityQueue_680437 implements MyQueueIntf {
-    MyMinHeap_680437 heap = new MyMinHeap_680437();
+public class MyPriorityQueue_680449 implements MyQueueIntf {
+    MyMinHeap_680449 heap = new MyMinHeap_680449();
     
     @Override
     public void enqueue(int d) {

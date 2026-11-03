@@ -2,17 +2,17 @@ import java.util.Arrays;
 
 import pack.*;
 
-public class Lab08_680437 {
+public class Lab08_680449 {
     // int[] arr = {42,17,-5,88,23,91,-12,65,7,30,55,-9,2,48,76,1,-22,99,14,61,37,83,-18,50,29,72,6,40,-3,95,11,68};
     static void task_1() {
         int[] arr = {42,17,-5,88,23,91,-12,65,7,30,55,-9,2,48,76,1,-22,99,14,61,37,83,-18,50,29,72,6,40,11,68}; // -3, 95
-        MyMergeSort_680437 sol = new MyMergeSort_680437();
+        MyMergeSort_680449 sol = new MyMergeSort_680449();
         sol.mSort(arr);
         System.out.println(Arrays.toString(arr));
     }
     static void task_2() {
         int[] arr = {42,17,-5,88,23,91,-12,65,7,30,55,-9,2,48,76,1,-22,99,14,61,37,83,-18,50,29,72,6,40,11,68}; // -3, 95
-        MyQuickSort_680437 sol = new MyQuickSort_680437();
+        MyQuickSort_680449 sol = new MyQuickSort_680449();
         sol.qSort(arr);
         System.out.println(Arrays.toString(arr));
     }
